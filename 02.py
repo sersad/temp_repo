@@ -2,8 +2,13 @@
 import sqlite3
 
 
-def foo():
-    pass
+def foo(x):
+    """
+    Функция возведения в куб
+    :param x:
+    :return:
+    """
+    return x ** 3
 
 
 def bar(x):
