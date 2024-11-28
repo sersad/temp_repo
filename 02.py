@@ -1,6 +1,11 @@
 # Импорт библиотеки
 import sqlite3
 
+
+def foo():
+    pass
+
+
 def main():
     # Подключение к БД
     con = sqlite3.connect("blizzard.db")
