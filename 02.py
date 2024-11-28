@@ -1,18 +1,22 @@
 # Импорт библиотеки
 import sqlite3
 
-# Подключение к БД
-con = sqlite3.connect("blizzard.db")
+def main():
+    # Подключение к БД
+    con = sqlite3.connect("blizzard.db")
 
-# Создание курсора
-cur = con.cursor()
+    # Создание курсора
+    cur = con.cursor()
 
-# Выполнение запроса и получение всех результатов
-result = cur.execute("""SELECT * FROM films
-            WHERE year = 2010""").fetchall()
+    # Выполнение запроса и получение всех результатов
+    result = cur.execute("""SELECT * FROM games""").fetchall()
 
-# Вывод результатов на экран
-for elem in result:
-    print(elem)
+    # Вывод результатов на экран
+    for elem in result:
+        print(elem)
 
-con.close()
+    con.close()
+
+
+if __name__ == '__main__':
+    main()
