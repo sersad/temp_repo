@@ -6,6 +6,15 @@ def foo():
     pass
 
 
+def bar(x):
+    """
+    Функция возвращает квадрат числа
+    :param x: Число
+    :return: Квадрат числа
+    """
+    return x ** 2
+
+
 def main():
     # Подключение к БД
     con = sqlite3.connect("blizzard.db")
